@@ -9,7 +9,75 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            sdfsdf
+            <asp:HiddenField ID="hfContactID" runat="server" />
+            <table>
+                <tr>
+                    <td>
+                        <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                  <tr>
+                    <td>
+                        <asp:Label ID="Label3" runat="server" Text="mobile"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox ID="txtMobile" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+        
+                  <tr>
+                    <td>
+                        <asp:Label ID="Label2" runat="server" Text="address"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
+
+                
+                  <tr>
+                    <td>
+                        
+                    </td>
+                    <td colspan="2">
+                        <asp:Button ID="btnSave" runat="server" Text="Save" />
+                        <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" />
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        
+                    </td>
+                    <td colspan="2">
+                        <asp:Label ID="LblSuccessMessage" runat="server" Text="" ForeColor="Green"></asp:Label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        
+                    </td>
+                    <td colspan="2">
+                        <asp:Label ID="LblErrorMessage" runat="server" Text="" ForeColor="Red"></asp:Label>            
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <asp:GridView ID="gvContact" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="Name" HeaderText="Name" />
+                    <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkView" runat="server" CommandArgument='<%# Eval("id") %>'> view</asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
         </div>
     </form>
 </body>

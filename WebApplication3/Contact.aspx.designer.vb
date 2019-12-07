@@ -122,13 +122,13 @@ Partial Public Class Contact1
     Protected WithEvents LblSuccessMessage As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Label4 control.
+    '''LblErrorMessage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents LblErrorMessage As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''gvContact control.
